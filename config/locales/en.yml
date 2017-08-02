@@ -37,6 +37,8 @@ en:
       this_is: "This is the home page for the"
       rails_tutorial: "Ruby on Rails Tutorial"
       sample_application: "sample application."
+      signup_link: "Sign up now!"
+      rails_logo: "Rails logo"
     help:
       help: "Help"
       get_help: "Get help on the Ruby on Rails Tutorial at the"
@@ -62,3 +64,19 @@ en:
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
+    header:
+      sample_app: "sample app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      rails_tutorial: "Ruby on Rails Tutorial"
+      michael: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      the: "The"
+      by: "by"
+  users:
+    new:
+      signup: "Signup"
