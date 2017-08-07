@@ -7,7 +7,7 @@ RSpec.describe StaticPagesController, type: :controller do
         get :show, params: {page: :home}
       end
 
-      it{expect(response).to render_template("home")}
+      it{expect(response).to render_template :home}
     end
 
     context "when param is about" do
