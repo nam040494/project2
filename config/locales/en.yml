@@ -1,82 +1,63 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  static_pages:
-    home:
-      home: "Home"
-      sample_app: "Sample App"
-      this_is: "This is the home page for the"
-      rails_tutorial: "Ruby on Rails Tutorial"
-      sample_application: "sample application."
-      signup_link: "Sign up now!"
-      rails_logo: "Rails logo"
-    help:
-      help: "Help"
-      get_help: "Get help on the Ruby on Rails Tutorial at the"
-      rails_help: "Rails Tutorial help section"
-      to_get_help: "To get help on this sample app, see the"
-      rails_tutorial_book: "Ruby on Rails Tutorial book"
-    about:
-      the: "The"
-      about: "About"
-      rails_tutorial: "Ruby on Rails Tutorial"
-      book: "book"
-      screencast: "screencast series"
-      to_teach: "to teach web development with"
-      rails: "Ruby On Rails"
-      this_is: "This is the sample application for the tutorial"
-      is_a: "is a"
-    contact:
-      contact: "Contact"
-      desc: "Contact the Ruby on Rails Tutorial about the sample app at the"
-      contact_page: "contact page"
   application:
     hello: "Hello world!"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
-    header:
-      sample_app: "sample app"
-      home: "Home"
-      help: "Help"
-      login: "Log in"
     footer:
-      rails_tutorial: "Ruby on Rails Tutorial"
-      michael: "Michael Hartl"
       about: "About"
-      contact: "Contact"
-      news: "News"
-      the: "The"
       by: "by"
+      contact: "Contact"
+      michael: "Michael Hartl"
+      news: "News"
+      rails_tutorial: "Ruby on Rails Tutorial"
+      the: "The"
+    header:
+      help: "Help"
+      home: "Home"
+      login: "Log in"
+      sample_app: "sample app"
+  shared:
+    error_messages:
+      error: "error"
+      the_form_contain: "The form contain"
+  static_pages:
+    about:
+      about: "About"
+      book: "book"
+      rails: "Ruby On Rails"
+      rails_tutorial: "Ruby on Rails Tutorial"
+      screencast: "screencast series"
+      the: "The"
+      this_is: "This is the sample application for the tutorial"
+      to_teach: "to teach web development with"
+      is_a: "is a"
+    contact:
+      contact: "Contact"
+      contact_page: "contact page"
+      desc: "Contact the Ruby on Rails Tutorial about the sample app at the"
+    help:
+      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      help: "Help"
+      rails_help: "Rails Tutorial help section"
+      rails_tutorial_book: "Ruby on Rails Tutorial book"
+      to_get_help: "To get help on this sample app, see the"
+    home:
+      home: "Home"
+      rails_logo: "Rails logo"
+      rails_tutorial: "Ruby on Rails Tutorial"
+      sample_app: "Sample App"
+      sample_application: "sample application."
+      signup_link: "Sign up now!"
+      this_is: "This is the home page for the"
   users:
+    failed: "Failed!"
     new:
+      confirm_password: "Confirm your password"
+      create: "Create my account"
+      enter_email: "Enter your email"
+      enter_name: "Enter your name"
+      enter_password: "Enter your password"
       signup: "Signup"
+    not_found: "User not found!"
+    welcome: "Welcome to the Sample App!"
