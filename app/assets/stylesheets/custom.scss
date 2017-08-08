@@ -20,6 +20,7 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+
   text-align: center;
 }
 
@@ -66,6 +67,7 @@ p {
   margin-right: 10px;
   padding-top: 9px;
   text-transform: uppercase;
+
   &:hover {
     color: white;
     text-decoration: none;
@@ -77,23 +79,48 @@ p {
 footer {
   a {
     color: $gray;
+    
     &:hover {
       color: $gray-darker;
     }
   }
+
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   margin-top: 45px;
   padding-top: 5px;
+
   small {
     float: left;
   }
+
   ul {
     float: right;
+
     li {
       float: left;
       margin-left: 15px;
     }
+
     list-style: none;
+  }
+}
+
+/* form */
+
+#error_explanation {
+  color: red;
+
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  
+  .form-control {
+    color: $state-danger-text;
   }
 }

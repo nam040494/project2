@@ -10,5 +10,4 @@ RSpec.describe UsersController, type: :controller do
     it {is_expected.to have_http_status :success}
     it {expect(subject.body).to have_title "Signup | Ruby on Rails Tutorial Sample App"}
   end
-
 end
