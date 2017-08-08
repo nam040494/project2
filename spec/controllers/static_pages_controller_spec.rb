@@ -2,12 +2,14 @@ require "rails_helper"
 
 RSpec.describe StaticPagesController, type: :controller do
   describe "GET #show" do
+    render_views
     context "when param is home" do
       before do
         get :show, params: {page: :home}
       end
 
       it{expect(response).to render_template :home}
+      it{expect(response.body).to have_title "Home | Ruby on Rails Tutorial Sample App"}
     end
 
     context "when param is about" do
