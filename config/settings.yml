@@ -3,6 +3,7 @@ user:
     max_length: 255
   email:
     max_length: 255
+  expired_time: 2
   password:
     min_length: 6
 user_helper:
