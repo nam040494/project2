@@ -30,5 +30,22 @@ RSpec.describe "User Logins", type: :request do
 
       expect(response.body).to include login_path
     end
+
+    context "login with remembering" do
+      before do
+        post login_path, params: {session: {email: user.email, password: user.password, remember_me: "1"}}
+      end
+
+      it {expect(response.cookies["remember_token"]).not_to eq nil}
+    end
+
+    context "login without remembering" do
+      before do
+        post login_path, params: {session: {email: user.email, password: user.password, remember_me: "1"}}
+        post login_path, params: {session: {email: user.email, password: user.password, remember_me: "0"}}
+      end
+
+      it {expect(response.cookies["remember_token"]).to eq nil}
+    end
   end
 end
