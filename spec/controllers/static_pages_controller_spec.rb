@@ -5,7 +5,7 @@ RSpec.describe StaticPagesController, type: :controller do
     render_views
     context "when param is home" do
       before do
-        get :show, params: {page: :home}
+        get :show, params: {page_type: :home}
       end
 
       it{expect(response).to render_template :home}
@@ -14,7 +14,7 @@ RSpec.describe StaticPagesController, type: :controller do
 
     context "when param is about" do
       before do
-        get :show, params: {page: :about}
+        get :show, params: {page_type: :about}
       end
 
       it{expect(response).to render_template :about}
@@ -22,7 +22,7 @@ RSpec.describe StaticPagesController, type: :controller do
 
     context "when param is help" do
       before do
-        get :show, params: {page: :help}
+        get :show, params: {page_type: :help}
       end
 
       it{expect(response).to render_template :help}
@@ -30,7 +30,7 @@ RSpec.describe StaticPagesController, type: :controller do
 
     context "when param is contact" do
       before do
-        get :show, params: {page: :contact}
+        get :show, params: {page_type: :contact}
       end
 
       it{expect(response).to render_template :contact}
