@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "User Logins", type: :request do
+RSpec.describe "Users Login", type: :request do
   describe "GET /login" do
     before do
       get login_path

@@ -13,10 +13,13 @@ en:
       rails_tutorial: "Ruby on Rails Tutorial"
       the: "The"
     header:
+      account: "Account"
       help: "Help"
       home: "Home"
       login: "Log in"
       sample_app: "sample app"
+      settings: "Settings"
+      users: "Users"
   sessions:
     new:
       login: "Log in"
@@ -59,13 +62,33 @@ en:
       signup_link: "Sign up now!"
       this_is: "This is the home page for the"
   users:
+    cannot_change_another: "You can not change another user"
+    destroy:
+      can_not_delete: "Can not delete"
+      deleted: "User deleted"
+    edit:
+      change: "change"
+      edit_user: "Edit user"
+      save_change: "Save Changes"
+      update_profile: "Update your profile"
     failed: "Failed!"
-    new:
+    form:
       confirm_password: "Confirm your password"
-      create: "Create my account"
       enter_email: "Enter your email"
       enter_name: "Enter your name"
       enter_password: "Enter your password"
+    index:
+      all_users: "All users"
+    new:
+      create: "Create my account"
       signup: "Signup"
     not_found: "User not found!"
+    please_login: "Please log in."
+    update:
+      profile_updated: "Profile updated"
+      failed: "Failed!"
+    user:
+      delete: "delete"
+      are_you_sure? : "Are you sure?"
     welcome: "Welcome to the Sample App!"
+    you_are_not_admin: "You are not an admin"
