@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "EditUsers", type: :request do
   describe "GET /edit_users" do
-    let :user {FactoryGirl.create :user}
+    let :user {FactoryGirl.create :user, activated: true}
     it do
       get edit_user_path user
       expect(response).to redirect_to login_path
