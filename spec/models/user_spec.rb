@@ -61,4 +61,20 @@ RSpec.describe User, type: :model do
       it {is_expected.not_to be_valid}
     end
   end
+
+  describe "#following" do
+    let :user {FactoryGirl.create :user}
+    let :other {FactoryGirl.create :user, name: "other", email: "other@gmail.com",
+      password: "foobar", password_confirmation: "foobar"}
+
+    it do
+      expect(user.following? other).not_to eq true
+
+      user.follow other
+      expect(user.following? other).to eq true
+
+      user.unfollow other
+      expect(user.following? other).not_to eq true
+    end
+  end
 end
