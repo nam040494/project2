@@ -17,6 +17,13 @@ en:
       home: "Home"
       login: "Log in"
       sample_app: "sample app"
+  sessions:
+    new:
+      login: "Log in"
+      new_user: "New user?"
+      signup: "Sign up now!"
+    create:
+      failed: "Invalid email/password combination"
   shared:
     error_messages:
       error: "error"
