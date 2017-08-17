@@ -22,6 +22,7 @@ en:
       login: "Log in"
       new_user: "New user?"
       signup: "Sign up now!"
+      remember_me: "Remember me on this computer"
     create:
       failed: "Invalid email/password combination"
   shared:
