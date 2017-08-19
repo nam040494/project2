@@ -1,4 +1,8 @@
 en:
+  account_activations:
+    edit:
+      activated: "Account activated!"
+      invalid_link: "Invalid activation link"
   application:
     hello: "Hello world!"
   layouts:
@@ -20,6 +24,10 @@ en:
       sample_app: "sample app"
       settings: "Settings"
       users: "Users"
+  mailer:
+    user_mailer:
+      account_activation: "Account activation"
+      password_reset: "Password reset"
   sessions:
     new:
       login: "Log in"
@@ -27,7 +35,9 @@ en:
       signup: "Sign up now!"
       remember_me: "Remember me on this computer"
     create:
+      check_email: "Check your email for the activation link."
       failed: "Invalid email/password combination"
+      not_activated: "Account not activated. "
   shared:
     error_messages:
       error: "error"
@@ -63,6 +73,8 @@ en:
       this_is: "This is the home page for the"
   users:
     cannot_change_another: "You can not change another user"
+    create:
+      check_email: "Please check your email to activate your account."
     destroy:
       can_not_delete: "Can not delete"
       deleted: "User deleted"
@@ -92,3 +104,9 @@ en:
       are_you_sure? : "Are you sure?"
     welcome: "Welcome to the Sample App!"
     you_are_not_admin: "You are not an admin"
+  user_mailer:
+    account_activation:
+      activate: "Activate"
+      content: "Welcome to the Sample App! Click on the link below to activate your account:"
+      hi: "Hi"
+      sample_app: "Sample App"

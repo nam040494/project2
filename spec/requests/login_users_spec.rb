@@ -10,7 +10,7 @@ RSpec.describe "Users Login", type: :request do
   end
 
   describe "POST /login" do
-    let :user {FactoryGirl.create :user}
+    let :user {FactoryGirl.create :user, activated: true}
 
     it do
       post login_path, params: {session: {email: user.email, password: user.password}}

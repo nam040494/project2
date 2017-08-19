@@ -32,6 +32,7 @@ RSpec.describe UsersController, type: :controller do
 
   describe "POST #create" do
     render_views
+
     context "invalid Signup" do
       let :count {0}
       before do
@@ -57,7 +58,6 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it {expect(User.count).not_to eq count}
-      it {expect(response).to redirect_to user_path 1}
     end
   end
 
