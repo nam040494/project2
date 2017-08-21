@@ -20,4 +20,16 @@ RSpec.describe UserMailer, type: :mailer do
     end
   end
 
+  describe "password reset" do
+    let :user {FactoryGirl.create :user}
+    let :mail {UserMailer.password_reset user}
+
+    before do
+      user.reset_token = User.new_token
+    end
+
+    it {expect(mail.subject).to eq "Password reset"}
+    it {expect(mail.to).to eq [user.email]}
+    it {expect(mail.from).to eq ["from@example.com"]}
+  end
 end

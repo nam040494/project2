@@ -28,8 +28,22 @@ en:
     user_mailer:
       account_activation: "Account activation"
       password_reset: "Password reset"
+  password_resets:
+    create:
+      email_not_found: "Email address not found"
+      email_sent: "Email sent with password reset instructions"
+    edit:
+      reset_password: "Reset password"
+      update_password: "Update password"
+    new:
+      forgot_password: "Forgot password"
+      submit: "Submit"
+    password_reset_expired: "Password reset has expired."
+    update:
+      reset_success: "Password has been reset."
   sessions:
     new:
+      forgot_password: "forgot password"
       login: "Log in"
       new_user: "New user?"
       signup: "Sign up now!"
@@ -107,6 +121,14 @@ en:
   user_mailer:
     account_activation:
       activate: "Activate"
-      content: "Welcome to the Sample App! Click on the link below to activate your account:"
+      content: "Welcome to the Sample App! Click on the link below
+        to activate your account:"
       hi: "Hi"
       sample_app: "Sample App"
+    password_reset:
+      password_reset: "Password reset"
+      click_link_to_reset: "To reset your password click the link below:"
+      expired_time: "This link will expire in two hours."
+      message: "If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is."
+      reset_password: "Reset password"
