@@ -5,6 +5,12 @@ en:
       invalid_link: "Invalid activation link"
   application:
     hello: "Hello world!"
+  errors:
+    messages:
+      extension_whitelist_error: "invalid extension"
+      size_error: "should be less than 5MB"
+      max_file_size_error: "Maximum file size is 5MB.
+        Please choose a smaller file."
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -28,6 +34,17 @@ en:
     user_mailer:
       account_activation: "Account activation"
       password_reset: "Password reset"
+  microposts:
+    ago: "ago."
+    create:
+      micropost_created: "Micropost created!"
+    destroy:
+      deleted: "Micropost deleted"
+      failed: "Failed"
+    micropost:
+      delete: "delete"
+      you_sure: "You sure?"
+    posted: "Posted"
   password_resets:
     create:
       email_not_found: "Email address not found"
@@ -56,6 +73,13 @@ en:
     error_messages:
       error: "error"
       the_form_contain: "The form contain"
+    micropost_form:
+      post: "Post"
+      placeholder: "Compose new micropost..."
+      size_error: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      view_profile: "view my profile"
+      micropost: "micropost"
   static_pages:
     about:
       about: "About"
@@ -85,6 +109,7 @@ en:
       sample_application: "sample application."
       signup_link: "Sign up now!"
       this_is: "This is the home page for the"
+      micropost_feed: "Micropost Feed"
   users:
     cannot_change_another: "You can not change another user"
     create:
@@ -110,6 +135,8 @@ en:
       signup: "Signup"
     not_found: "User not found!"
     please_login: "Please log in."
+    show:
+      microposts: "Microposts"
     update:
       profile_updated: "Profile updated"
       failed: "Failed!"

@@ -1,3 +1,7 @@
+micropost:
+  content:
+    max_length: 140
+  picture_size: 5
 user:
   name:
     max_length: 255
@@ -14,3 +18,7 @@ users:
     per_page: 10
   user:
     size: 50
+picture:
+  limit_size:
+    height: 200
+    width: 200
