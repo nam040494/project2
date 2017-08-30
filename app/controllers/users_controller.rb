@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: %i(index)
+  before_action :logged_in_user, except: %i(new create)
   before_action :correct_user, only: %i(edit update)
-  before_action :load_user, except: %i(index new create)
+  before_action :load_user, only: %i(show destroy following followers)
   before_action :verify_admin!, only: :destroy
 
   def index
-    @users = User.select(:id, :name, :email).order(:name).paginate page: params[:page],
-      per_page: Settings.users.index.per_page
+    @users = User.select(:id, :name, :email).order(:name)
+      .paginate page: params[:page], per_page: Settings.users.index.per_page
   end
 
   def new
@@ -18,10 +18,10 @@ class UsersController < ApplicationController
 
     if @user.save
       @user.send_activation_email
-      flash[:info] = t ".activation"
-      redirect_to @user
+      flash[:info] = t ".check_email"
+      redirect_to root_url
     else
-      flash.now[:danger] = t ".error"
+      flash.now[:danger] = t ".failed"
       render :new
     end
   end
@@ -29,22 +29,16 @@ class UsersController < ApplicationController
   def show
     @microposts = @user.microposts.paginate page: params[:page],
       per_page: Settings.users.index.per_page
-
-    return @user
-    flash[:danger] = t ".not_found"
-    redirect_to root_url
-
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t ".updated"
+      flash[:success] = t ".profile_updated"
       redirect_to @user
     else
-      flash.now[:danger] = t ".updated_failed"
+      flash.now[:danger] = t ".failed"
       render :edit
     end
   end
@@ -53,22 +47,20 @@ class UsersController < ApplicationController
     if @user.destroy
       flash[:success] = t ".deleted"
     else
-      flash[:danger] = t ".cannot_deleted"
+      flash[:danger] = t ".can_not_delete"
     end
     redirect_to users_url
   end
 
   def following
-    @title = t ".title"
-    @users = @user.following.paginate page: params[:page],
-      per_page: Settings.users.index.per_page
+    @title = t ".following"
+    @users = @user.following.paginate page: params[:page]
     render "show_follow"
   end
 
   def followers
-    @title = t ".title"
-    @users = @user.followers.paginate page: params[:page],
-      per_page: Settings.users.index.per_page
+    @title = t ".followers"
+    @users = @user.followers.paginate page: params[:page]
     render "show_follow"
   end
 
@@ -80,11 +72,16 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find_by id: params[:id]
-    redirect_to root_url unless current_user? @user
+
+    return if current_user.is_user? @user
+    flash[:danger] = t ".cannot_change_another"
+    redirect_to root_url
   end
 
   def verify_admin!
-    redirect_to(root_url) unless current_user.admin?
+    rerurn if current_user.admin?
+    flash[:danger] = t ".you_are_not_admin"
+    redirect_to root_url
   end
 
   def load_user
