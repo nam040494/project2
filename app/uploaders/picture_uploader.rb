@@ -1,7 +1,7 @@
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  process resize_to_limit: [Settings.picture_size.height_maximum,
-    Settings.picture_size.width_maximum]
+  process resize_to_limit: [Settings.picture.limit_size.height,
+    Settings.picture.limit_size.width]
 
   storage :file
 
@@ -9,7 +9,7 @@ class PictureUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  def extension_white_list
+  def extension_whitelist
     %w(jpg jpeg gif png)
   end
 end

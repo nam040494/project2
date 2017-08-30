@@ -1,4 +1,5 @@
-<% provide :title, t(".title") %>
+<% provide :title, t(".home") %>
+
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -12,18 +13,21 @@
         <%= render "shared/micropost_form" %>
       </section>
     </aside>
+    <div class="col-md-8">
+      <h3><%= t ".micropost_feed" %></h3>
+      <%= render "shared/feed" %>
+    </div>
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1><%= t(".welcome") %></h1>
-
+    <h1><%= t ".sample_app" %></h1>
     <h2>
-      <%= t(".decription") %>
-      <a href="http://www.railstutorial.org/"><%= t(".rails_tut") %></a>
-      <%= t(".sample") %>
-
+      <%= t ".this_is" %>
+      <%= link_to t(".rails_tutorial"), "http://www.railstutorial.org/" %>
+      <%= t ".sample_application" %>
     </h2>
-
-    <%= link_to t(".signup"), "#", class: "btn btn-lg btn-primary" %>
+    <%= link_to t(".signup_link"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
+  <%= link_to image_tag("rails.png", alt: (t ".rails_logo")), "http://rubyonrails.org/" %>
+  <%= image_tag("kitten.jpg", alt: "kitten") %>
 <% end %>

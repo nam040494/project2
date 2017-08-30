@@ -1,12 +1,13 @@
-class Micropost < ActiveRecord::Base
+class Micropost < ApplicationRecord
   belongs_to :user
+  default_scope -> {order created_at: :desc}
   mount_uploader :picture, PictureUploader
 
-  validates :user_id, presence: true
-  validates :content, presence: true, length: {maximum: Settings.microposts.content.maximum}
-  validate  :picture_size
+  validates :user, presence: true
+  validates :content, presence: true,
+    length: {maximum: Settings.micropost.content.max_length}
+  validate :picture_size
 
-  default_scope -> {order(created_at: :desc)}
   scope :feed, (lambda do |user_id|
     following_ids = "SELECT followed_id FROM relationships
       WHERE  follower_id = :user_id"
@@ -17,8 +18,8 @@ class Micropost < ActiveRecord::Base
   private
 
   def picture_size
-    if picture.size > Settings.picture_size.size.megabytes
-      errors.add :picture, I18n.t(".error")
+    if picture.size > Settings.micropost.picture_size.megabytes
+      errors.add :picture, I18n.t("errors.messages.size_error")
     end
   end
 end
