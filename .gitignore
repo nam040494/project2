@@ -16,16 +16,3 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
-/node_modules
-/yarn-error.log
-
-.byebug_history
-
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
-
-/public/uploads
-/app/assets/javascripts/i18n/
-/public/javascripts/
