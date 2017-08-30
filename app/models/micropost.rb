@@ -8,7 +8,12 @@ class Micropost < ApplicationRecord
     length: {maximum: Settings.micropost.content.max_length}
   validate :picture_size
 
-  scope :feed, -> (user_id){where user_id: user_id}
+  scope :feed, (lambda do |user_id|
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE  follower_id = :user_id"
+    where("user_id IN (#{following_ids})
+      OR user_id = :user_id", user_id: user_id)
+  end)
 
   private
 

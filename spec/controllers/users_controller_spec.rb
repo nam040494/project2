@@ -143,4 +143,37 @@ RSpec.describe UsersController, type: :controller do
       it {expect(response).to redirect_to root_url}
     end
   end
+
+  describe "GET #following" do
+    let :user {FactoryGirl.create :user}
+    let :other {FactoryGirl.create :user, name: "other", email: "other@gmail.com",
+      password: "foobar", password_confirmation: "foobar"}
+
+    context "not logged in" do
+      before {get :following, params: {id: user.id}}
+
+      it {expect(response).to redirect_to login_url}
+    end
+
+    context "render following page" do
+      before do
+        allow(controller).to receive(:current_user) {user}
+        user.follow other
+        get :following, params: {id: user.id}
+      end
+
+      it {expect(user.following.empty?).not_to eq true}
+      it {expect(response).to render_template :show_follow}
+    end
+  end
+
+  describe "GET #follower" do
+    let :user {FactoryGirl.create :user}
+
+    context "not logged in" do
+      before {get :followers, params: {id: user.id}}
+
+      it {expect(response).to redirect_to login_url}
+    end
+  end
 end

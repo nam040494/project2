@@ -77,6 +77,9 @@ en:
       post: "Post"
       placeholder: "Compose new micropost..."
       size_error: "Maximum file size is 5MB. Please choose a smaller file."
+    stats:
+      following: "following"
+      followers: "followers"
     user_info:
       view_profile: "view my profile"
       micropost: "micropost"
@@ -123,6 +126,12 @@ en:
       save_change: "Save Changes"
       update_profile: "Update your profile"
     failed: "Failed!"
+    follow:
+      follow: "Follow"
+    followers:
+      followers: "Followers"
+    following:
+      following: "Following"
     form:
       confirm_password: "Confirm your password"
       enter_email: "Enter your email"
@@ -137,6 +146,11 @@ en:
     please_login: "Please log in."
     show:
       microposts: "Microposts"
+    show_follow:
+      microposts: "Microposts:"
+      view_profile: "view my profile"
+    unfollow:
+      unfollow: "Unfollow"
     update:
       profile_updated: "Profile updated"
       failed: "Failed!"
