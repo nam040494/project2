@@ -1,0 +1,155 @@
+en:
+  static_pages:
+    home:
+      title: "Home"
+      welcome: "Welcome to the Sample App"
+      deciption: "This is the home page for the"
+      rails_tut: "Ruby on Rails Tutorial"
+      sample: "sample application."
+      signup: "Sign up now!"
+      rails_logo: "Rails logo"
+      kitten: "kitten"
+    help:
+      title: "Help"
+    about:
+      title: "About"
+    contact:
+      title: "Contact"
+  users:
+    index:
+      title: "All users"
+      decription: "All users"
+      please_login: "Please log in"
+    new:
+      title: "User"
+      sign: "Sign up"
+      Confirmation: "Confirmation"
+      create_account: "Create my account"
+      button: "Create my account"
+      please_login: "Please log in"
+    create:
+      activation: "Please check your email to activate your account."
+      error: "sign up failed"
+    show:
+      not_found: "not found"
+      micropost: "Microposts"
+    update:
+      updated: "profile updated"
+      updated_failed: "updated failed"
+    edit:
+      title: "Edit users"
+      decription: "Update your profile"
+      button: "save change"
+    destroy:
+      deleted: "User deleted"
+      cannot_deleted: "can not delete user"
+    user:
+      messages: "you sure?"
+    follow:
+      btn_follow: "follow"
+    unfollow:
+      btn_unfollow: "unfollow"
+    following:
+      title: "following"
+    followers:
+      title: "followers"
+    show_follow:
+      view_profile: "view my profile"
+      microposts: "microposts: "
+  layouts:
+    application: "Ruby on Rails Tutorial Sample App"
+    header:
+      sample: "sample app"
+      account: "Account"
+      home: "Home"
+      help: "Help"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+  shared:
+    error_messages:
+      form_contains: "The form contains"
+      error: "error"
+    micropost_form:
+      compose: "Compose new micropost..."
+      post: "Post"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      view_profile: "view my profile"
+      micropost: "micropost"
+    stats:
+      following: "following"
+      followers: "followers"
+  sessions:
+    new:
+      title: "Login"
+      decription: "Log in"
+      btn_login: "Log in"
+      text_signup: "Sign up now!"
+      text_new_user: "New user?"
+      remember: "Remember me on this computer"
+      forgot_password: "forgot password"
+    create:
+      error: "Invalid email/password combination"
+      messages: "Account not activated. Check your email for the activation link."
+  account_activations:
+    edit:
+      Account_activated: "Account activated!"
+      activation_link: "activation link"
+  user_mailer:
+    account_activation:
+      email_actiavte: "Welcome to the Sample App! Click on the link below to activate your account:"
+      hi: "Hi"
+      Account_activation: "Account activation"
+      password_reset: "Password reset"
+      sample_app: "Sample App"
+      activate: "Activate"
+      click_link_active: "Welcome to the Sample App! Click on the link below to activate your account:"
+    password_reset:
+      click_link_reset: "To reset your password click the link below:"
+      link_will_expire: "This link will expire in two hours."
+      not_request: "If you did not request your password to be reset, please ignore this email and
+        your password will stay as it is."
+      mail_password_reset: "Password reset"
+      click_link_below: "To reset your password click the link below:"
+      reset_password: "Reset password"
+  password_resets:
+    new:
+      title: "Forgot password"
+      decription: "Forgot password"
+      submit: "Submit"
+    edit:
+      title: "Password reset"
+      decription: "Password reset"
+      confirmation: "Confirmation"
+      btn_update: "Update password"
+      not_found: "not found"
+    create:
+      email_send: "Email sent with password reset instructions"
+      email_notfound: "email not found"
+    update:
+      empty: "can't be empty"
+      success: "Password has been reset"
+    check_expiration:
+      expire: "Password reset has expired."
+    load_user:
+      not_found: "not found"
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+    create:
+      micropost_created: "Micropost created!"
+      error: "error"
+    picture_size:
+      error: "should be less than 5MB"
+  application:
+    logged_in_user:
+      please_login: "please log in"
+  relationships:
+    create:
+      not_found: "not found"
+    destroy:
+      not_found: "not found"
