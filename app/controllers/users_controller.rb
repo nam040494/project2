@@ -79,7 +79,7 @@ class UsersController < ApplicationController
   end
 
   def verify_admin!
-    rerurn if current_user.admin?
+    return if current_user.admin?
     flash[:danger] = t ".you_are_not_admin"
     redirect_to root_url
   end

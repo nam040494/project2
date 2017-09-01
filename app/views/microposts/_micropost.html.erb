@@ -19,7 +19,7 @@
       <p>
         <strong><%=f.user.name %> :  </strong>
         <%= f.content %><BR>
-        <%= t ".posted" %>
+        <%= t ".comment" %>
         <%= time_ago_in_words f.created_at  %>
         <%= t ".ago" %>
         <% if current_user.is_user? micropost.user %>
