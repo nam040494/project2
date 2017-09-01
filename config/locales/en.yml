@@ -45,6 +45,7 @@ en:
       delete: "delete"
       you_sure: "You sure?"
     posted: "Posted"
+    comment: :"Comment"
   password_resets:
     create:
       email_not_found: "Email address not found"
@@ -179,4 +180,4 @@ en:
       error: "failed"
     update:
       apdate_success: "You updated your comment"
-      update_error:
+      update_error: "update error"
