@@ -14,5 +14,21 @@
       <%= link_to t(".delete"), micropost, method: :delete,
         data: {confirm: t(".you_sure")} %>
     <% end %>
+
+    <% micropost.comments.each do |f|%>
+      <p>
+        <strong><%=f.user.name %> :  </strong>
+        <%= f.content %><BR>
+        <%= t ".posted" %>
+        <%= time_ago_in_words f.created_at  %>
+        <%= t ".ago" %>
+        <% if current_user.is_user? micropost.user %>
+          <%= link_to t ".delete", method: :delete,
+            data: {confirm: t(".you_sure")} %>
+        <% end %>
+      </p>
+    <% end %>
+
+    <%= render "comments/form", micropost: micropost %>
   </span>
 </li>
