@@ -173,3 +173,10 @@ en:
       message: "If you did not request your password to be reset,
         please ignore this email and your password will stay as it is."
       reset_password: "Reset password"
+  comments:
+    create:
+      success: "Successfully created..."
+      error: "failed"
+    update:
+      apdate_success: "You updated your comment"
+      update_error:
