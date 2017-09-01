@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
         @feed_items = Micropost.feed(current_user.id)
           .paginate page: params[:page],
           per_page: Settings.users.index.per_page
-          @comment= Comment.new
+        @comment= Comment.new
       end
 
       render "#{params[:page_type]}"
