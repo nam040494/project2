@@ -17,10 +17,8 @@ gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "4.3.1"
 gem "mini_magick", "4.7.0"
-gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.3"
 gem "sass-rails", "~> 5.0"
-gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate"
@@ -39,6 +37,7 @@ group :development do
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
+  gem "sqlite3"
 end
 
 group :test do
@@ -46,6 +45,12 @@ group :test do
   gem "guard-minitest", "2.4.4"
   gem "minitest-reporters", "1.1.14"
   gem "rails-controller-testing", "1.0.2"
+end
+
+group :production do
+  gem "pg", "0.17.1"
+  gem "rails_12factor", "0.0.2"
+  gem "puma", "~> 3.7"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
